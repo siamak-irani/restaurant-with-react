@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import classes from "./Categories.module.css";
 // import chelo_jujeh from "../../files/images/categories/iranian-foods/chelo-jujeh.PNG";
@@ -10,64 +10,54 @@ import FoodItem from "../../assests/FoodItem";
 import MoreLink from "./MoreLink";
 
 import { FOODS } from "../../database/data";
-// const FOODS = [
-//   [
-//     {
-//       header: "غذاهای ایرانی",
-//       class: "iranian-foods",
-//       path: "iranian-foods",
-//     },
-//     {
-//       title: "چلو جوجه کباب",
-//       src: chelo_jujeh,
-//       score: {
-//         count: "344",
-//         num: "4.5",
-//       },
-//       price: "120000",
-//     },
-//     {
-//       title: "چلو کباب",
-//       src: chelo_kabab,
-//       score: {
-//         count: "875",
-//         num: "4.6",
-//       },
-//       price: "125000",
-//     },
-//     {
-//       title: "چلو قیمه",
-//       src: geymeh,
-//       score: {
-//         count: "465",
-//         num: "4.3",
-//       },
-//       price: "114000",
-//     },
-//     {
-//       title: "چلو مرغ",
-//       src: chelo_morgh,
-//       score: {
-//         count: "234",
-//         num: "4.7",
-//       },
-//       price: "134000",
-//     },
-//     {
-//       title: "قورمه سبزی",
-//       src: ghormeh_sabzi,
-//       score: {
-//         count: "676",
-//         num: "4.9",
-//       },
-//       price: "129000",
-//     },
-//   ],
-// ];
 
 const Categories = () => {
+  const [notification, setNotification] = useState([]);
+  const [timeoutsId, setTimeoutsId] = useState([]);
+
+  const removeNotif = (id) => {
+    setNotification((prev) => prev.filter((notif) => id !== notif.id));
+  };
+
+  const addNotif = (msg) => {
+    const id = Math.floor(Math.random() * 1000000);
+    setNotification((prev) => [{ msg, id }, ...prev]);
+
+    const timeoutId = setTimeout(() => {
+      removeNotif(id);
+    }, 2000);
+    setTimeoutsId((prev) => [...prev, timeoutId]);
+  };
+
+  useEffect(() => {
+    return () => {
+      timeoutsId.forEach((id) => clearTimeout(id));
+    };
+  }, []);
+
   return (
     <div className={classes["categories"]}>
+      <div className={`${classes["notification"]}`} style={{position:"absolute", left:"1rem"}}>
+        {notification.map((n, index) => {
+          return (
+            <div
+              style={{
+                fontSize:"14px",
+                background: "green",
+                color: "white",
+                borderRadius: "5px",
+                width: "fit-content",
+                padding: "3px 5px",
+                margin: "3px 0",
+              }}
+              key={index}
+            >
+              اضافه شد
+            </div>
+          );
+        })}
+      </div>
+
       {FOODS.map((category) => {
         return (
           <div
@@ -87,10 +77,10 @@ const Categories = () => {
                     score={food.score}
                     price={food.price}
                     btnAction="order"
+                    addNotif={addNotif}
                   />
                 );
               })}
-              <MoreLink to={category[0].path} />
             </div>
           </div>
         );

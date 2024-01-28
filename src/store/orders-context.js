@@ -12,17 +12,41 @@ export const OrdersContextProvider = (props) => {
   const [orders, setOrders] = useState([]);
 
   const addOrderHandler = (newOrder) => {
-    setOrders((prevOrders) => {
-      return [...prevOrders, newOrder];
-    });
+    let exsitingOrder = orders.find((order) => order.id === newOrder.id);
+    if (!exsitingOrder) {
+      setOrders((prev) => {
+        return [...prev, { ...newOrder, quantity: 1 }];
+      });
+    } else {
+      exsitingOrder.quantity++;
+      // setOrders((prevOrders) => {
+      //   return [...prevOrders, newOrder];
+      // });
+    }
     setOrdersNumber(orders.length);
   };
 
   const removeOrderHandler = (id) => {
-    const newOrders = orders.filter((obj) => {
-      return obj.id !== id;
+    setOrders((prev) => {
+      const oldOrders = [...prev];
+
+      
+      const exsitingOrder = oldOrders.find((order) => order.id === id);
+      const otherOrders = oldOrders.filter((order) => order.id !== id);
+
+      if (exsitingOrder.quantity === 1)
+        return oldOrders.filter((order) => order.id !== id);
+      //here
+      else exsitingOrder.quantity--;
+
+      return oldOrders;
     });
-    setOrders(newOrders);
+
+    // const newOrders = orders.filter((obj) => {
+    //   return obj.id !== id;
+    // });
+    // setOrders(newOrders);
+
     setOrdersNumber(orders.length);
   };
 

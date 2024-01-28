@@ -5,6 +5,7 @@ import Button from "../assests/Button";
 import classes from "./FoodItem.module.css";
 import stars from "../files/images/stars.png";
 import OrdersContext from "../store/orders-context";
+import { useLocation } from "react-router-dom";
 
 const FoodItem = (props) => {
   const ordersCtx = useContext(OrdersContext);
@@ -17,7 +18,9 @@ const FoodItem = (props) => {
       price: props.price,
     };
     ordersCtx.onAddOrder(foodItem);
+    props.addNotif("اضافه شد")
   };
+
 
   const removeOrderHandler = () => {
     ordersCtx.onRemoveOrder(props.id);
@@ -34,6 +37,7 @@ const FoodItem = (props) => {
   }
   return (
     <div className={`${classes["food-item"]} ${classes[props.className]}`}>
+      {props.quantity && <div>{props.quantity}×</div>}
       <div className={classes["item-image"]}>
         <img src={props.src}></img>
       </div>

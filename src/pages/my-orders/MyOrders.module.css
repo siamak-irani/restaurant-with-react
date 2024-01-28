@@ -1,5 +1,7 @@
 .my-orders{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding:5rem;
 }
 

@@ -3,10 +3,12 @@ import React, { useCallback, useContext } from "react";
 import classes from "./MyOrders.module.css";
 import OrdersContext from "../../store/orders-context";
 import FoodItem from "../../assests/FoodItem";
+import { useLocation } from "react-router-dom";
 
 const MyOrders = () => {
   const ordersCtx = useContext(OrdersContext);
   const my_orders = ordersCtx.orders;
+
 
   return (
     <div className={classes["my-orders"]}>
@@ -23,6 +25,7 @@ const MyOrders = () => {
             score={order.score}
             price={order.price}
             btnAction="delete"
+            quantity={order.quantity || null}
           />
           
         );

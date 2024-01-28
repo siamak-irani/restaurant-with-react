@@ -15,6 +15,11 @@
 .category .items{
     margin:7rem 0;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 
+.category .items > * {
+    margin-top: 3rem;
+}
