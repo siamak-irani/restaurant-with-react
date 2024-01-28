@@ -3,6 +3,24 @@
 
 .nav ul {
   display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  right: 0;
+  top: 71px;
+  overflow: hidden;
+  transition: height .2s;
+}
+
+.nav svg {
+  fill: rgb(234, 80, 87);
+}
+
+.icon {
+  height: 24px;
+  cursor: pointer;
 }
 
 .nav a {
@@ -14,4 +32,10 @@
 
 .nav a:hover {
   border-bottom: 2px solid rgb(234, 80, 87);
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    display: block;
+  }
 }

@@ -1,52 +1,80 @@
-.our-services{
+.our-services {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem 2rem;
+  margin: 2rem auto -250px;
+}
+
+.service {
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1rem 1rem;
+  overflow: auto;
+
+  flex-direction: column;
+}
+
+.textarea {
+  width: 10rem;
+  margin-top: 1rem;
+  align-self: flex-start;
+}
+
+.textarea h1 {
+  color: rgb(27, 27, 27);
+  margin-bottom: 0.5rem;
+}
+
+.textarea p {
+  color: rgb(122, 122, 122);
+  font-size: 14px;
+}
+
+.logo {
+  background: rgb(254, 204, 102);
+  width: fit-content;
+  height: fit-content;
+  border-radius: 50%;
+  padding: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem 1rem;
+}
+
+.logo svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+@media screen and (min-width: 400px) {
+
+    .service {
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 0 1rem;
+        overflow: auto;
+      
+        flex-direction: row;
+      }
+}
+
+@media screen and (min-width: 1000px) {
+  .our-services {
     height: fit-content;
-    display:flex;
-    background:white;
-    border-radius:30px;
-    box-shadow: 5px 5px 20px rgba(0,0,0,.2);
-    padding:1.5rem 2rem;
-    margin:2rem auto -250px;
-
-}
-
-.service{
-    padding:0 1rem;
     display: flex;
-    align-items: center;
-    margin:0 1rem;
-    overflow:auto;
-
-}
-
-.textarea{
-    width:10rem;
-    margin-top:1rem;
-    align-self: flex-start;
-}
-
-.textarea h1{
-    color:rgb(27, 27, 27);
-    margin-bottom:.5rem;
-}
-
-.textarea p{
-    color:rgb(122, 122, 122);
-    font-size: 14px;
-}
-
-.logo{
-    background:rgb(254,204,102);
-    width:fit-content;
-    height:fit-content;
-    border-radius: 50%;
-    padding:17px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin:0 1rem 1rem;
-}
-
-.logo svg{
-    width:2.5rem;
-    height: 2.5rem;
+    flex-direction: row;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem 2rem;
+    margin: 2rem auto -250px;
+  }
 }

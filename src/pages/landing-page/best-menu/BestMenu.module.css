@@ -20,7 +20,25 @@
 
 .popular-menu{
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     justify-items: center;
     margin:3rem 0;
+}
+
+@media screen and (min-width:650px) {
+    .popular-menu{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        margin:3rem 0;
+    }
+}
+
+@media screen and (min-width:950px) {
+    .popular-menu{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        margin:3rem 0;
+    }
 }

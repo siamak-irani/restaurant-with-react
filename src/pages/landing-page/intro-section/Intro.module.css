@@ -2,57 +2,83 @@
   background-color: rgb(255, 240, 233);
   border-radius: 0 0 2rem 2rem;
 
-  padding:2rem 5rem 10rem;
+  padding: 2rem 1rem 10rem;
   position: relative;
 }
 
-.intro--title{
+.intro--title {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
 
-.textarea{
+.textarea {
   overflow: auto;
 }
 
-.textarea > *{
-  margin:3rem 0;
+.textarea > * {
+  margin: 3rem 0;
 }
 
-.textarea h1{
-  color:rgb(234, 80, 87);
-  font-size:40px;
+.textarea h1 {
+  color: rgb(234, 80, 87);
+  font-size: 40px;
   max-width: 30rem;
 }
 
-.textarea h2{
-  color:rgb(122, 122, 122);
-  font-size:16px;
+.textarea h2 {
+  color: rgb(122, 122, 122);
+  font-size: 16px;
 }
 
-.buy-now{
-  background:rgb(234, 80, 87);
+.buy-now {
+  background: rgb(234, 80, 87);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:.5rem .5rem .5rem 1rem;
-  color:white;
-  width:fit-content;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  color: white;
+  width: fit-content;
 
   border-radius: 100px;
-
 }
 
-.buy-now .img{
-  background:rgb(254,204,102);
+.buy-now .img {
+  background: rgb(254, 204, 102);
   border-radius: 50%;
-  padding:7px;
-  margin-left:1rem;
+  padding: 7px;
+  margin-left: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.shoping-bag{
-  fill:rgb(59, 59, 59);
+.shoping-bag {
+  fill: rgb(59, 59, 59);
+}
+
+.images img {
+  width: 90%;
+  margin-right: 0;
+}
+
+@media screen and (min-width: 768px) {
+
+  .intro {
+    background-color: rgb(255, 240, 233);
+    border-radius: 0 0 2rem 2rem;
+  
+    padding: 2rem 5rem 10rem;
+    position: relative;
+  }
+  .intro--title {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .images img {
+    width: 90%;
+    margin-right: 3rem;
+  }
 }

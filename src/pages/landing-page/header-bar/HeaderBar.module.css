@@ -1,7 +1,7 @@
 .header-bar {
-  background-color: rgb(255, 240, 233);
+  background-color: rgb(255, 234, 223);
   font-size: 18px;
-  padding: 2rem 5rem;
+  padding: 1rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,6 +9,8 @@
   top: 0;
   z-index: 100;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  
 }
 
 .logout-form {
@@ -22,7 +24,7 @@
 }
 
 .logo img {
-  width: 10rem;
+  width: 7rem;
 }
 
 .auth-inputs {
@@ -41,4 +43,18 @@
   border-radius: 50%;
   width: 16px;
   height: 16px;
+}
+@media screen and (min-width:768px) {
+  .header-bar {
+    background-color: rgb(255, 240, 233);
+    font-size: 18px;
+    padding: 1rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  }
 }

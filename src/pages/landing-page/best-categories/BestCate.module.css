@@ -5,6 +5,7 @@
 
 .best-cate--title {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin-bottom: 5rem;
 }
@@ -20,6 +21,7 @@
 
 .categories {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
@@ -67,4 +69,10 @@
 .arrow-back{
     fill:rgb(234, 80, 87);
     width: 12px;
+}
+
+@media screen and (min-width:800px) {
+  .best-cate--title{
+    flex-direction: row;
+  }
 }
