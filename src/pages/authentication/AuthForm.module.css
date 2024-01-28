@@ -1,0 +1,44 @@
+.form-container {
+  padding: 2rem;
+  
+}
+
+Form {
+ width: 18rem;
+}
+
+Form label {
+  color: rgb(219, 137, 139);
+  margin-bottom: 0.8rem;
+}
+
+Form > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+Form input {
+}
+
+.form-buttons {
+  display: flex;
+  flex-direction: row;
+}
+.form-buttons > * {
+  /* width: 7rem; */
+}
+
+.sign-up-link {
+  margin: 2rem 0;
+  color: rgb(70, 70, 70);
+}
+
+.sign-up-link a {
+  color: rgb(234, 80, 87);
+}
+
+.sign-up-link a:hover {
+  border-bottom: 1px solid rgb(234, 80, 87);
+}

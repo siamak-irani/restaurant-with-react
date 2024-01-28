@@ -1,0 +1,59 @@
+.footer{
+    background-color: rgb(255, 234, 223);
+    display: flex;
+    justify-content: space-between;
+    padding:5rem;
+}
+
+.footer div, .footer a{
+    color:rgb(173, 173, 173);
+
+}
+
+.footer .ghazako{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .ghazako .logo{
+    margin-bottom:5rem;
+}
+
+.footer h1{
+    color:rgb(234, 80, 87);
+    font-size:30px;
+}
+
+.footer li{
+    margin:.8rem 0;
+}
+
+/* .socials .icons{
+    display: flex;
+    justify-content: space-between;
+} */
+
+.socials h1{
+    margin-bottom: 1rem;
+}
+
+.socials .icon{
+    margin:0 .5rem;
+    transition: fill .2s;
+}
+
+.socials .instagram:hover{
+    fill:rgb(228, 64, 95);
+}
+
+.socials .twitter:hover{
+    fill: #1DA1F2;
+}
+
+.socials .facebook:hover{
+    fill:#3b5998;
+}
+
+.socials .linkedin:hover{
+    fill: rgb(10, 102, 194);
+}

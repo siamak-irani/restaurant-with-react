@@ -1,0 +1,9 @@
+.my-orders{
+    display: flex;
+    padding:5rem;
+}
+
+.my-orders > *{
+    margin:2rem;
+}
+

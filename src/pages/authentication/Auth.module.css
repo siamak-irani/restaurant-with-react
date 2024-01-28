@@ -1,0 +1,23 @@
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(247, 247, 247);
+  height: 100vh;
+}
+
+.auth--card {
+  background-color: white;
+  height: fit-content;
+  display: flex;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+  overflow: hidden;
+}
+
+.auth--image {
+  width: 30rem;
+  height: 40rem;
+  background-color: green;
+}

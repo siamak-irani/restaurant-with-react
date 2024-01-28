@@ -1,0 +1,20 @@
+.categories{
+    margin: 3rem 0;
+}
+
+.category{
+    padding-right: 2rem;
+
+}
+
+.category h1{
+    font-size:25px;
+    color:rgb(234, 80, 87);
+}
+
+.category .items{
+    margin:7rem 0;
+    display: flex;
+}
+
+

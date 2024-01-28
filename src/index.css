@@ -1,0 +1,37 @@
+@font-face {
+  font-family: Yekan;
+  src: url(../src/files/fonts/Yekan.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(252, 252, 252);
+  position: relative;
+  direction: rtl;
+  font-family:"Yekan";
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+svg {
+  fill: rgb(134, 134, 134);
+  width: 1.54rem;
+  height: 1.5rem;
+}
+

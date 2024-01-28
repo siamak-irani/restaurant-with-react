@@ -1,0 +1,17 @@
+.nav {
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav a {
+  padding: 0 1rem;
+  color: rgb(151, 145, 145);
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+
+.nav a:hover {
+  border-bottom: 2px solid rgb(234, 80, 87);
+}

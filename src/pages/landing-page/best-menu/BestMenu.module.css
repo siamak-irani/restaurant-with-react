@@ -1,0 +1,26 @@
+.best-menu {
+  padding: 2rem 5rem;
+
+}
+
+.best-menu--title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.textarea h1{
+    font-size:40px;
+    margin-bottom: 1rem;
+}
+
+.textarea p{
+    color: rgb(148, 148, 148);
+    max-width: 15rem;
+}
+
+.popular-menu{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    margin:3rem 0;
+}

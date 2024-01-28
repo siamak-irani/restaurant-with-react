@@ -1,0 +1,79 @@
+.food-item{
+    background:rgb(255,234,223);
+    text-align: center;
+    padding:1rem;
+    padding-right: 0;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    border-radius: 2rem;
+    max-width: 17rem;
+    position: relative;
+    margin:5rem 0rem;
+}
+
+.category-row{
+    margin:0 2rem;
+}
+
+.item-image{
+    width:12rem;
+    height: 12rem;
+    border:5px solid rgb(234, 80, 87) ;
+    display:flex;
+    justify-content: center;
+    position: absolute;
+    top:-70px;
+    right:-50px;
+    border-radius: 50%;
+    overflow: hidden;
+    
+}
+
+.item-image img{
+    width: 100%;
+}
+
+.item-title{
+    width:fit-content;
+    margin:7rem 0 .5rem;
+    font-size: 20px;
+}
+
+
+.score{
+    display: flex;
+    align-items: center;
+}
+
+.score img{
+
+    width:5rem;
+    height: 14.5px;
+    /* width:100%; */
+    margin-right: .5rem;
+}
+
+.score span{
+    font-size: 14px;
+    color:rgb(112, 112, 112);
+    margin-top:5px;
+}
+
+.price-order-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:2rem 0;
+}
+
+.price-order-box .price{
+    width:6rem;
+    margin:0 1rem;
+    font-size:16px;
+}
+
+.price-order-box span{
+    font-size:12px;
+}

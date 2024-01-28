@@ -1,0 +1,30 @@
+.btn {
+  all: unset;
+  background-color: rgb(234, 80, 87);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  height: fit-content;
+  font-size: 14px;
+  text-align: center;
+  width:fit-content;
+  cursor: pointer;
+}
+
+.header-cart {
+  padding: 0;
+  padding: 0.2rem 0 0 0.2rem;
+  background-color: transparent;
+  position: relative;
+}
+
+.header-cart svg {
+  fill: rgb(234, 80, 87);
+}
+
+.form-btn{
+}
+
+.form-btn:hover{
+  box-shadow: 5px 5px 10px rgba(0,0,0,.2);
+}
